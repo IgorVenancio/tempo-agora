@@ -1,0 +1,34 @@
+.conteudo {
+    background-image: linear-gradient(to top right, #0d4c8fa6, #03dee9ad);
+    margin-left: 5%;
+    width: 90%;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.listaSugestoes {
+    text-align: left;
+    display: block;
+}
+
+table {
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow:hidden
+}
+
+table tr:nth-child(odd) td, th{
+    background-color: #027591;
+    padding: 0% 5%;
+}
+
+table tr:nth-child(even) td, th{
+    background-color: #025b79;
+    padding: 0% 5%;
+}
+
+.bi-geo-alt-fill{
+    margin: 5px;
+}

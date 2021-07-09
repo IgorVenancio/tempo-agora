@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" lang="pt-br">
+        <title>O Tempo</title>    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="getLocation()">
+        <div class="container-fluid conteudo">
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <center>
+                        <h1>O TEMPO AGORA</h1>
+                    </center>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <form role="form">
+                        <div class="form-group">
+                            <div id="divBusca" style="display: block;">
+                                <input type="text" autocomplete="off" id="txtBuscaCidade" class="form-control input-lg txtBuscaCidade" placeholder="Pesquise uma cidade..." >                                
+                            </div>
+                            <div id="divSugestoes" class="listaSugestoes"></div>
+                            <div id="alertaCidadeNaoEncontrada" class="alert alert-warning" role="alert" style="visibility: hidden;">
+                                Informações meteorológicas da cidade não encontradas.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <h3><i class="bi bi-geo-alt-fill" style="color:#f6be03;"></i><span id="Cidade">Procurando...</span></h3>
+                                </th>
+                                <th style="text-align: right;">
+                                    <h4><span id="Data"></span></h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">
+                                    <h5><span id="DiaSemana"></span></h5>
+                                </td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>
+                                    <img src="" id="iconeTempo">
+                                    <h5><span id="spanDescricao"></span></h5>
+                                </td>
+                                <td>
+                                    <h1 style="font-size: 72px"><span id="Temperatura"></span>°</h1>
+                                    <span id="SensacaoTermica"> Sensação Térmica: <span id="spanSensacao"></span>°C</span><br>
+                                </td>
+                                <td style="padding-top: 2.5%; text-align: left;">
+                                    <span class="bi bi-chevron-up"> <span id="spanTempMax"></span> °C</span><br>
+                                    <span class="bi bi-chevron-down"> <span id="spanTempMin"></span> °C</span><br><br>
+                                    <span id="TemperaturaMin" > Vento:   <span id="spanVento"></span> km/h</span><br>
+                                    <span id="TemperaturaMax" > Umidade: <span id="spanUmidade"></span>%</span><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>   
+                </div>
+            <div class="col-md-4">
+				<p style="font-size: 16px;">Projeto em JavaScript que informa as condições do tempo na localização do usuário e permite a busca por cidades. A busca e as informações meteorológicas são alimentadas pelas APIs <a href="http://geodb-cities-api.wirefreethought.com/">GeoDB Cities</a> e <a href="https://openweathermap.org/">OpenWeather</a>.</p>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
